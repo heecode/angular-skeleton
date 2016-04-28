@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <title></title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <!--<link href="Content/bootstrap-theme.css" rel="stylesheet"/>-->
+    <!--<link href="Content/template.min.css" rel="stylesheet"/>-->
+    <link href="Content/applicationStyle.css" rel="stylesheet" />
+    <link href="Content/bootflat/bootflat.css" rel="stylesheet" />
+    <link href="Content/angular-toastr.min.css" rel="stylesheet" />
+    <link href="Content/font-awesome.min.css" rel="stylesheet" />
+    <meta charset="utf-8" />
+</head>
+<body ng-app="myApp">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#/Home">Home</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="#/Home">Home</a></li>
+                    <li><a href="#/Register">Register</a></li>
+                   <li><a href="#/Admin/Users">Admin</a></li>
+                   
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="http://www.heemi.com.my">heemi</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container container-fluid" style="width:auto">
+        <div ng-view></div>
+    </div>
+    <!--- essential java script libraries --->
+    <!-- jQuery-->
+    <script src="Scripts/jquery-2.0.0.min.js"></script>
+    <!-- SignalR-->
+    <!-- Bootstrap (needs to be placed after jQuery)-->
+    <script src="Scripts/moment.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/bootflat/icheck.min.js"></script>
+    <script src="Scripts/bootflat/jquery.fs.selecter.min.js"></script>
+    <script src="Scripts/bootflat/jquery.fs.stepper.min.js"></script>
+
+    <!-- AngularJs-->
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-route.min.js"></script>
+    <script src="Scripts/angular-animate.min.js"></script>
+
+    <!-- Angular Thirdpartied (Opensource and Free) -->
+    <script src="Scripts/angular-toastr.min.js"></script>
+    <script src="Scripts/angular-toastr.tpls.js"></script>
+
+    <!-- Data Processing Application (needs to be placed after angular)-->
+    <script src="Scripts/app/app.js"></script>
+
+
+    <!-- Config -->
+    <script src="Config/apiRouteService.js"></script>
+    <!-- Services -->
+    <!-- Essential -->
+    <script src="Services/userServices.js"></script>
+   
+
+    <!-- Application Services -->
+   
+
+    <!-- Controllers -->
+    <script src="Controllers/mainController.js"></script>
+    <script src="Controllers/homeController.js"></script>
+    <script src="Controllers/userController.js"></script>
+<script src="Controllers/calculatorController.js"></script>
+
+    <!-- Directives -->
+    <script src="Directives/myAppDirective.js"></script>
+
+<!-- Admin Area if exist -->
+   
+
+</body>
+</html>

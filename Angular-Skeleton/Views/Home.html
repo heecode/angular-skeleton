@@ -1,0 +1,17 @@
+﻿<div class="row text-left">
+    <h1>{{homeController.greeting}} - {{homeController.name}}</h1>
+
+    Who is your daddy:<input text ng-model="homeController.name"/><br/>
+    Who is your daddy again:<input text ng-model="homeController.message" />
+    <ul>
+        <li ng-repeat="learn in homeController.learns">
+            <span class="name">
+                {{ learn }}
+            </span>
+        </li>
+
+    </ul>
+    <x-hello-world-template/>
+    <br/>
+    <x-hello-world-binding message-attr="message"  />
+</div>

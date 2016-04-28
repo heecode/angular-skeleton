@@ -1,0 +1,36 @@
+﻿body {
+    background-color: #353535;
+}
+
+.background {
+    color: #FFFFFF;
+    background-color: #353535;
+}
+
+.mycontent-left {
+    border-right: 1px solid #333;
+    border-color: #FFFFFF;
+    border-width: medium;
+}
+
+.table-headercolor {
+    color: #FFFFFF;
+    background-color: #454545;
+}
+
+.col-seperator {
+    border-right: 1px solid #333;
+    border-color: #FFFFFF;
+    border-width: medium;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+  
