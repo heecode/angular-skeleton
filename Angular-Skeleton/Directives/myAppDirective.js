@@ -46,6 +46,29 @@
         };
     };
 
+    app.directive("helloWorldBindingIsolate", [helloWorldBindingIsolate]);
+    function helloWorldBindingIsolate() {
+        return {
+            scope: {
+                message: '=messageAttr',
+                showMessage: '&showMessageAttr'
+            },
+            restrict: 'AEC',
+            replace: true,
+            templateUrl: 'Views/HelloWorldIsolate.html',
+            link: function (scope, elem, attrs) {
+                scope.$watch('message', function (value) {
+                    scope.showMessage({ arg: 'sample argument' });
+                });
+
+                scope.clearMessage = function () {
+                    scope.message = '';//
+
+                }
+            }
+        };
+    };
+
     app.directive("inputPositive", function () {
         return {
             restrict: "C",
