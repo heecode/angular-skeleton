@@ -2,15 +2,21 @@
     "use strict";
     var app = angular.module("myApp");
 
-    app.controller("calculatorController", [calculatorController]);
+    app.controller("calculatorController", ["HelloService", calculatorController]);
+   
 
-    function calculatorController() {
+    function calculatorController(HelloService) {
         var vm = this;
         
         vm.getTotal = function () {
             vm.total = vm.salary * vm.tax;
         };
-       // this.getTotal = function() { throw new Error("Not implemented"); };
+
+        vm.hello = HelloService.SayHello('Heemi Hanif');
+        vm.sayMyName = HelloService.SayMyName('Heemi Fazeree');
+        // this.getTotal = function() { throw new Error("Not implemented"); };
     }
+
+
 
 })();
