@@ -943,6 +943,7 @@
     <Content Include="scripts\moment.min.js" />
     <Content Include="Services\helloService.js" />
     <Content Include="Services\httpServices.js" />
+    <Content Include="Services\serviceScaffold.js" />
     <Content Include="Services\userServices.js" />
     <Content Include="tests\controller\calculatorControllerTests.js" />
     <Content Include="tests\controller\homeControllerTests.js" />
