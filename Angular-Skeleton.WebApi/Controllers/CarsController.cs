@@ -22,9 +22,14 @@ namespace Angular_Skeleton.WebApi.Controllers
         }
 
         // GET: api/Cars
-        public IEnumerable<CarViewModel> Get()
+        //public IEnumerable<CarViewModel> Get()
+        //{
+        //    return getCarList();
+        //}
+
+        public IHttpActionResult Get()
         {
-            return getCarList();
+            return Ok(getCarList());
         }
 
         // GET: api/Cars/5

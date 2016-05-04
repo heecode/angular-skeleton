@@ -11,14 +11,13 @@
 
         vm.getCarByPlateNo = function () {
             vm.car = searchCarByPlateNo(vm.plateNo);
-           // vm.car = CarService.GetCarByPlateNo(vm.plateNo);
+         
         };
 
         var searchCarByPlateNo = function(plateNo) {
             CarService.GetCarByPlateNo(plateNo).then(function (results) {
-                //vm.car = results.data;
-                //vm.cars = [];
-                vm.cars.push(results.data);
+                vm.cars = [];
+                vm.cars.push(results.data[0]);
             }, function (reason) {
                 console.log(reason);
             });
