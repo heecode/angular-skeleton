@@ -1,6 +1,6 @@
 ﻿(function () {
 
-    var dataProcessingApp = angular.module("myApp");
+    var app = angular.module("myApp");
 
     var httpServices = function (apiRouteService, $http, $q) {
 
@@ -76,7 +76,7 @@
         return services;
     }
 
-    dataProcessingApp.factory("httpServices",
+    app.factory("httpServices",
         ["apiRouteService", "$http", "$q",
             httpServices]);
 })();

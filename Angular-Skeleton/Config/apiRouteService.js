@@ -1,6 +1,6 @@
 ﻿(function () {
     "use strict";
-    var dataProcessingApp = angular.module("myApp");
+    var app = angular.module("myApp");
 
     var apiRouteService = function () {
         //var apiurl = "http://10.14.161.233:6060/dp.api";
@@ -15,5 +15,5 @@
         };
     }
 
-    dataProcessingApp.factory("apiRouteService", [apiRouteService]);
+    app.factory("apiRouteService", [apiRouteService]);
 })();

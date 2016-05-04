@@ -17,20 +17,20 @@
             return httpServices.HttpGetService(uri);
         });
 
-       var update = function (id, data) {
+        var update = (function(id, data) {
             var turi = uri + "/" + id + "?cache=" + moment();
             return httpServices.HttpPostService(turi, data);
-        }
+        });
 
-        var save = function (data) {
+        var save = (function(data) {
             var uri = apiRouteService.getUriFor_carsController;
             return httpServices.HttpPostService(uri, data);
-        }
+        });
 
-        carService.getCars = getCars;
-        carService.getCarByPlateNo = getCarByPlateNo;
-        carService.save = save;
-        carService.update = update;
+        carService.GetCars = getCars;
+        carService.GetCarByPlateNo = getCarByPlateNo;
+        carService.Save = save;
+        carService.Update = update;
 
         return carService;
 

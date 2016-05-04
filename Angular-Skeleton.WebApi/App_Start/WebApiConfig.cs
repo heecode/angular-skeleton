@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using Microsoft.Owin.Security.OAuth;
 using Newtonsoft.Json.Serialization;
 
@@ -15,7 +16,9 @@ namespace Angular_Skeleton.WebApi
             // Web API configuration and services
             // Configure Web API to use only bearer token authentication.
 
-           // HttpConfiguration config = GlobalConfiguration.Configuration;
+            // HttpConfiguration config = GlobalConfiguration.Configuration;
+            var cors = new EnableCorsAttribute("*", "*", "*");
+            config.EnableCors(cors);
             config.Formatters.JsonFormatter.SerializerSettings.ContractResolver =
                 new CamelCasePropertyNamesContractResolver();
 
@@ -26,7 +29,7 @@ namespace Angular_Skeleton.WebApi
 
             // Web API routes
             config.MapHttpAttributeRoutes();
-            config.EnableCors();
+            
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",

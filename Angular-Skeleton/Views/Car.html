@@ -1,7 +1,7 @@
 ﻿<div class="row text-left">
 
     Plate No :<input text ng-model="carController.plateNo"/><br/>
-    <button ng-click="carController.getCarByPlateNo" value="Search" name="Search"></button>
+    <button ng-click="carController.getCarByPlateNo()" value="Search"  name="Search">Enter</button>
   
     <ul>
         <li ng-repeat="car in carController.cars">
