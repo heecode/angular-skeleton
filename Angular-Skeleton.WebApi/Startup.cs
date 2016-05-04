@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Owin;
 using Owin;
+//using Microsoft.Owin.Cors;
 
 [assembly: OwinStartup(typeof(Angular_Skeleton.WebApi.Startup))]
 
@@ -12,6 +13,7 @@ namespace Angular_Skeleton.WebApi
     {
         public void Configuration(IAppBuilder app)
         {
+           
             ConfigureAuth(app);
         }
     }
