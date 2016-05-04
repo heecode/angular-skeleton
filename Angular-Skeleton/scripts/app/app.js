@@ -30,6 +30,10 @@
                     templateUrl: "Views/Calculator.html",
                     controller: "calculatorController",
                     controllerAs: "calculatorController"
+                }).when("/Car", {
+                    templateUrl: "Views/Car.html",
+                    controller: "carController",
+                    controllerAs: "carController"
                 });
         }
     ]);

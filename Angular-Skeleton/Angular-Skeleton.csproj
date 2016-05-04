@@ -77,6 +77,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Controllers\carController.js" />
     <Content Include="Directives\myAppDirective.js" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
@@ -941,6 +942,7 @@
     <Content Include="scripts\moment-with-locales.min.js" />
     <Content Include="scripts\moment.js" />
     <Content Include="scripts\moment.min.js" />
+    <Content Include="Services\carService.js" />
     <Content Include="Services\helloService.js" />
     <Content Include="Services\httpServices.js" />
     <Content Include="Services\serviceScaffold.js" />
@@ -949,6 +951,7 @@
     <Content Include="tests\controller\homeControllerTests.js" />
     <Content Include="tests\controller\jasmineWorks.js" />
     <Content Include="Views\Calculator.html" />
+    <Content Include="Views\Car.html" />
     <Content Include="Views\HelloWorld.html" />
     <Content Include="Views\HelloWorldBinding.html" />
     <Content Include="Views\HelloWorldIsolate.html" />

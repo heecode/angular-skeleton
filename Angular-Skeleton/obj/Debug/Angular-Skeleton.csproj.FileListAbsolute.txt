@@ -61,6 +61,5 @@ C:\MyGit\angular-skeleton\Angular-Skeleton\bin\Microsoft.AI.Web.xml
 C:\MyGit\angular-skeleton\Angular-Skeleton\bin\Microsoft.AI.WindowsServer.xml
 C:\MyGit\angular-skeleton\Angular-Skeleton\bin\Microsoft.ApplicationInsights.xml
 C:\MyGit\angular-skeleton\Angular-Skeleton\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\MyGit\angular-skeleton\Angular-Skeleton\obj\Debug\Angular-Skeleton.csprojResolveAssemblyReference.cache
 C:\MyGit\angular-skeleton\Angular-Skeleton\obj\Debug\Angular-Boilerplat.dll
 C:\MyGit\angular-skeleton\Angular-Skeleton\obj\Debug\Angular-Boilerplat.pdb
