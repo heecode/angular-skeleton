@@ -18,11 +18,29 @@
 </div>
 <div class="row text-center" style="background: cornsilk">
 
-    Plate No :<input text ng-model="carController.plateNo" /><br />
-    Type :<input text ng-model="carController.carType" /><br />
-    Owner :<input text ng-model="carController.owner" /><br />
+    Plate No :<input text ng-model="carController.plateNo"/><br/>
+    Type :<input text ng-model="carController.carType"/><br/>
+    Owner :<input text ng-model="carController.owner"/><br/>
     <button ng-click="carController.save()" value="Add" name="Add">Add</button>
 
 
 
+</div>
+<div class="row text-center" style="background:aliceblue">
+    <script type="text/ng-template" id="saveCar.html">
+        <div class="modal-header">
+            <h3 class="modal-title">Car</h3>
+        </div>
+        <div class="modal-body">
+            Plate No :<input text ng-model="plateNo" /><br />
+            Type :<input text ng-model="carType" /><br />
+            Owner :<input text ng-model="owner" /><br />
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+            <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+        </div>
+    </script>
+    <button type="button" class="btn btn-default" ng-click="carController.open()">Add Car</button>
+    <button type="button" class="btn btn-default" ng-click="carController.openTemplate()">Add Car Template</button>
 </div>

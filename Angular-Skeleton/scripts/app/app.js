@@ -1,7 +1,7 @@
 ﻿(function () {
     "use strict";
     var dataProcessingApp = angular.module("myApp",
-    ["ngRoute", "ngAnimate", "toastr"]);
+    ["ngRoute", "ngAnimate", "toastr", , "ui.bootstrap"]);
 
     dataProcessingApp.config([
         "$routeProvider",

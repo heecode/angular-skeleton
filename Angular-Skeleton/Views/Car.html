@@ -1,9 +1,17 @@
 ﻿<div class="row text-center">
 
-    Plate No :<input text ng-model="carController.plateNo"/><br/>
-    Type :<input text ng-model="carController.carType"/><br/>
-    Owner :<input text ng-model="carController.carType" /><br />
-    <button ng-click="carController.save()" value="Add" name="Add">Add</button>
+    <div class="modal-header">
+        <h3 class="modal-title">Car Template</h3>
+    </div>
+    <div class="modal-body">
+        Plate No :<input text ng-model="plateNo" /><br />
+        Type :<input text ng-model="carType" /><br />
+        Owner :<input text ng-model="owner" /><br />
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+        <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+    </div>
 
     
 
