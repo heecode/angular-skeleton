@@ -15,45 +15,19 @@
                 console.log(reason);
             });
         }
+        
+       var saveCar = function (carContext) {
 
-       var openModal = function (template) {
-
-            var modalInstance = $uibModal.open({
-                animation: true,
-                templateUrl: template,
-                controller: 'CarInstanceCtrl',
-                size: 'lg'
-               
-            });
-
-            modalInstance.result.then(function (carContext) {
-                // $scope.selected = selectedItem;
-                saveCarModel(carContext);
-            }, function () {
-               // $log.info('Modal dismissed at: ' + new Date());
-            });
-        };
-
-        var saveCar = function () {
-            var carContext = {
-                plateNo: vm.plateNo,
-                owner: vm.owner,
-                carType: vm.carType
-            };
-            vm.context = carContext;
+           if (carContext == null) {
+                carContext = {
+                   plateNo: vm.plateNo,
+                   owner: vm.owner,
+                   carType: vm.carType
+               };
+           }
+           vm.context = carContext;
             CarService.Save(vm.context).then(function (results) {
                vm.cars.push(carContext);
-                notificationService.success("Saved", "Success");
-            }, function (reason) {
-                notificationService.error(reason);
-            });
-        }
-
-        var saveCarModel = function (carContext) {
-            
-            vm.context = carContext;
-            CarService.Save(vm.context).then(function (results) {
-                vm.cars.push(carContext);
                 notificationService.success("Saved", "Success");
             }, function (reason) {
                 notificationService.error(reason);
@@ -69,6 +43,23 @@
                notificationService.error(reason);
             });
         }
+
+        var openModal = function (template) {
+
+            var modalInstance = $uibModal.open({
+                animation: true,
+                templateUrl: template,
+                controller: 'CarInstanceCtrl',
+                size: 'lg'
+
+            });
+
+            modalInstance.result.then(function (carContext) {
+                saveCar(carContext);
+            }, function () {
+                // $log.info('Modal dismissed at: ' + new Date());
+            });
+        };
 
 
         vm.save = function () {
@@ -95,8 +86,7 @@
     app.controller("CarInstanceCtrl", ["$scope", "$uibModalInstance", CarInstanceCtrl]);
 
     function CarInstanceCtrl($scope,$uibModalInstance) {
-        //var vm = this;
-
+       
         $scope.ok = function () {
             var carContext = {
                 plateNo: $scope.plateNo,
