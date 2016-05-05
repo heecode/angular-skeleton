@@ -2,11 +2,9 @@
     "use strict";
     var app = angular.module("myApp");
 
-    app.controller("carController", ["CarService", carController]);
+    app.controller("carController", ["CarService", "notificationService", carController]);
 
-    //app.controller("carController", [ carController]);
-
-    function carController(CarService) {
+    function carController(CarService, notificationService) {
         var vm = this;
 
         vm.getCarByPlateNo = function () {
@@ -27,8 +25,9 @@
             vm.rawContext = "";
             CarService.GetCars().then(function (results) {
                 vm.cars = results.data;
+                notificationService.success("Data Load","Success");
            }, function (reason) {
-               console.log(reason);
+               notificationService.error(reason);
             });
         }
         loadCars();
