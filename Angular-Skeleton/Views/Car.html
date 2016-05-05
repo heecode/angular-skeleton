@@ -1,15 +1,10 @@
-﻿<div class="row text-left">
+﻿<div class="row text-center">
 
     Plate No :<input text ng-model="carController.plateNo"/><br/>
-    <button ng-click="carController.getCarByPlateNo()" value="Search"  name="Search">Enter</button>
-  
-    <ul>
-        <li ng-repeat="car in carController.cars">
-            <span class="name">
-                {{ car.owner }}
-            </span>
-        </li>
+    Type :<input text ng-model="carController.carType"/><br/>
+    Owner :<input text ng-model="carController.carType" /><br />
+    <button ng-click="carController.save()" value="Add" name="Add">Add</button>
 
-    </ul>
-   
+    
+
 </div>

@@ -31,7 +31,7 @@
                     controller: "calculatorController",
                     controllerAs: "calculatorController"
                 }).when("/Car", {
-                    templateUrl: "Views/Car.html",
+                    templateUrl: "Views/Cars.html",
                     controller: "carController",
                     controllerAs: "carController"
                 });

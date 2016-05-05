@@ -7,6 +7,8 @@
 
     function calculatorController(HelloService) {
         var vm = this;
+
+        
         
         vm.getTotal = function () {
             vm.total = vm.salary * vm.tax;

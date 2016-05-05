@@ -7,17 +7,27 @@
     function carController(CarService, notificationService) {
         var vm = this;
 
-        vm.getCarByPlateNo = function () {
-            vm.car = searchCarByPlateNo(vm.plateNo);
-         
-        };
-
-        var searchCarByPlateNo = function(plateNo) {
+        var searchCarByPlateNo = function (plateNo) {
             CarService.GetCarByPlateNo(plateNo).then(function (results) {
                 vm.cars = [];
                 vm.cars.push(results.data[0]);
             }, function (reason) {
                 console.log(reason);
+            });
+        }
+
+        var saveCar = function () {
+            var carContext = {
+                plateNo: vm.plateNo,
+                owner: vm.owner,
+                carType: vm.carType
+            };
+            vm.context = carContext;
+            CarService.Save(vm.context).then(function (results) {
+               vm.cars.push(carContext);
+                notificationService.success("Saved", "Success");
+            }, function (reason) {
+                notificationService.error(reason);
             });
         }
 
@@ -30,6 +40,17 @@
                notificationService.error(reason);
             });
         }
+
+
+        vm.save = function () {
+            saveCar();
+        }
+
+        vm.getCarByPlateNo = function () {
+            vm.car = searchCarByPlateNo(vm.plateNo);
+
+        };
+
         loadCars();
 
     }

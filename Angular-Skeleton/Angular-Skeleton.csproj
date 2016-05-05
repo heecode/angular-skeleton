@@ -953,6 +953,7 @@
     <Content Include="tests\controller\jasmineWorks.js" />
     <Content Include="Views\Calculator.html" />
     <Content Include="Views\Car.html" />
+    <Content Include="Views\Cars.html" />
     <Content Include="Views\HelloWorld.html" />
     <Content Include="Views\HelloWorldBinding.html" />
     <Content Include="Views\HelloWorldIsolate.html" />
