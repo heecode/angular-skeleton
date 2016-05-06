@@ -16,7 +16,7 @@
 
         vm.hello = HelloService.SayHello('Heemi Hanif');
         vm.sayMyName = HelloService.SayMyName('Heemi Fazeree');
-        // this.getTotal = function() { throw new Error("Not implemented"); };
+        
     }
 
 
