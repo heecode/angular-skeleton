@@ -5,6 +5,7 @@
     var AuthService = function ($http, $q, localStorageService, apiRouteService) {
 
         var serviceBase = apiRouteService.getUriFor_accountController;
+        var serviceToken = apiRouteService.getUriFor_tokenController;
 
         var authServiceFactory = {};
 
@@ -29,7 +30,7 @@
 
             var deferred = $q.defer();
 
-            $http.post(serviceBase + 'token', data, { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }).success(function (response) {
+            $http.post(serviceToken , data, { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }).success(function (response) {
 
                 localStorageService.set('authorizationData', { token: response.access_token, userName: loginData.userName });
 
@@ -76,7 +77,7 @@
 
     }
 
-    app.factory("authService", ['$http', '$q', 'localStorageService', "apiRouteService", AuthService]);
+    app.factory("authService", ["$http", "$q", "localStorageService", "apiRouteService", AuthService]);
 })();
 
 

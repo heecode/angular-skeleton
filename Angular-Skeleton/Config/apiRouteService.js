@@ -12,7 +12,8 @@
             getUriFor_usersController: apiurl + "/users",
             getUriFor_carsController: apiurl + "/cars",
             getUriFor_homeController: apiurl + "/homes",
-            getUriFor_accountController: apiurl + "/account"
+            getUriFor_accountController: apiurl + "/account",
+            getUriFor_tokenController: apiurl + "/token"
         };
     }
 

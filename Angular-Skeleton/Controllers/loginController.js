@@ -17,7 +17,7 @@
 
             authService.login(vm.loginData).then(function (response) {
 
-                $location.path('/cars');
+                $location.path('/Car');
 
             },
              function (err) {

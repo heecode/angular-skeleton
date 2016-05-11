@@ -4,7 +4,7 @@
 
     app.controller("homeController", [homeController]);
 
-    function homeController() {
+    function homeController(authService, $location) {
         var vm = this;
         vm.greeting ="Hello World";
         vm.learns = ['angular.js', "d3.js", 'bootstrap'];
@@ -13,6 +13,8 @@
         vm.showMessage = function(arg) {
             console.log('message change' + arg);
         }
+
+        
 
     }
 

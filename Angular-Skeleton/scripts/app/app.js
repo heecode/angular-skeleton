@@ -1,7 +1,7 @@
 ﻿(function () {
     "use strict";
     var dataProcessingApp = angular.module("myApp",
-    ["ngRoute", "ngAnimate", "toastr", , "ui.bootstrap"]);
+    ["ngRoute", "ngAnimate", "toastr", "LocalStorageModule", "angular-loading-bar", "ui.bootstrap"]);
 
     dataProcessingApp.config([
         "$routeProvider",
@@ -49,14 +49,14 @@
         }
     ]);
 
-    //dataProcessingApp.run(['authService', function (authService) {
-    //    authService.fillAuthData();
+    dataProcessingApp.run(['authService', function (authService) {
+        authService.fillAuthData();
 
 
-    //}]);
+    }]);
 
-    //dataProcessingApp.config(function ($httpProvider) {
-    //    $httpProvider.interceptors.push('authInterceptorService');
-    //});
+    dataProcessingApp.config(function ($httpProvider) {
+        $httpProvider.interceptors.push('authInterceptorService');
+    });
 
 })();
