@@ -34,7 +34,29 @@
                     templateUrl: "Views/Cars.html",
                     controller: "carController",
                     controllerAs: "carController"
+                }).when("/login", {
+                    templateUrl: "Views/Login.html",
+                    controller: "loginController",
+                    controllerAs: "loginController"
+                }).when("/signup", {
+                    templateUrl: "Views/Signup.html",
+                    controller: "signupController",
+                    controllerAs: "signupController"
                 });
+
+
+           
         }
     ]);
+
+    //dataProcessingApp.run(['authService', function (authService) {
+    //    authService.fillAuthData();
+
+
+    //}]);
+
+    //dataProcessingApp.config(function ($httpProvider) {
+    //    $httpProvider.interceptors.push('authInterceptorService');
+    //});
+
 })();

@@ -11,6 +11,7 @@
     <link href="Content/angular-toastr.min.css" rel="stylesheet" />
     <link href="Content/font-awesome.min.css" rel="stylesheet"/>
     <link href="Content/ui-bootstrap-csp.css" rel="stylesheet" />
+    <link href="content/loading-bar.css" rel="stylesheet" />
     <meta charset="utf-8" />
 </head>
 <body ng-app="myApp">
@@ -36,7 +37,10 @@
                    
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="http://www.heemi.com.my">heemi</a></li>
+                    <li data-ng-hide="!authentication.isAuth"><a href="#">Welcome {{authentication.userName}}</a></li>
+                    <li data-ng-hide="!authentication.isAuth"><a href="" data-ng-click="logOut()">Logout</a></li>
+                    <li data-ng-hide="authentication.isAuth"> <a href="#/login">Login</a></li>
+                    <li data-ng-hide="authentication.isAuth"> <a href="#/signup">Sign Up</a></li>
                 </ul>
             </div>
         </div>
@@ -59,12 +63,15 @@
     <!-- AngularJs-->
     <script src="Scripts/angular.min.js"></script>
     <script src="Scripts/angular-route.min.js"></script>
-<script src="Scripts/angular-animate.min.js"></script>
+    <script src="Scripts/angular-animate.min.js"></script>
     <script src="Scripts/angular-ui/ui-bootstrap.js"></script>
+    <script src="Scripts/angular-local-storage.min.js"></script>
+    <script src="Scripts/loading-bar.min.js"></script>
+   
 
     <script src="Scripts/angular-ui/ui-bootstrap.min.js"></script>
     <script src="Scripts/angular-ui/ui-bootstrap-tpls.js"></script>
-<script src="Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
+    <script src="Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
    
 
 
@@ -88,6 +95,8 @@
     <script src="Services/helloService.js"></script>
   
     <script src="Services/carService.js"></script>
+    <script src="Services/authService.js"></script>
+    <script src="Services/authInterceptorService.js"></script>
    
    
 
@@ -100,6 +109,9 @@
     <script src="Controllers/userController.js"></script>
     <script src="Controllers/calculatorController.js"></script>
     <script src="Controllers/carController.js"></script>
+    <script src="Controllers/signupController.js"></script>
+    <script src="Controllers/loginController.js"></script>
+    <script src="Controllers/indexController.js"></script>
 
     <!-- Directives -->
     <script src="Directives/myAppDirective.js"></script>
