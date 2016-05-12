@@ -1,4 +1,6 @@
-﻿using Angular_Skeleton.Api.Models;
+﻿using Angular_Skeleton.Api.Hubs;
+using Angular_Skeleton.Api.Models;
+using Microsoft.AspNet.SignalR;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +13,7 @@ namespace Angular_Skeleton.Api.Controllers
     [RoutePrefix("api/Cars")]
     public class CarsController : ApiController
     {
+        private readonly IHubContext _carsHub;
         
             private IEnumerable<CarViewModel> getCarList()
             {
@@ -22,8 +25,13 @@ namespace Angular_Skeleton.Api.Controllers
                 return carViewModels;
             }
 
+        public CarsController()
+        {
+            _carsHub = GlobalHost.ConnectionManager.GetHubContext<CarHub>();
+        }
 
-        [Authorize]
+
+        [System.Web.Http.Authorize]
         [Route("")]
         public IHttpActionResult Get()
             {
