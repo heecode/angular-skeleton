@@ -7,23 +7,31 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-
+using System.Runtime.Caching
 namespace Angular_Skeleton.Api.Controllers
 {
     [RoutePrefix("api/Cars")]
     public class CarsController : ApiController
     {
         private readonly IHubContext _carsHub;
-        
-            private IEnumerable<CarViewModel> getCarList()
+
+        private readonly string cacheKey = "cars"; 
+            private List<CarViewModel> getCarListCache(CarViewModel carViewModel)
             {
                 var carViewModels = new List<CarViewModel>();
                 carViewModels.Add(new CarViewModel { CarType = "Toyota", Owner = "Heemi", PlateNo = "WRX 3783" });
                 carViewModels.Add(new CarViewModel { CarType = "Proton", Owner = "Neelofa", PlateNo = "WRX 3788" });
                 carViewModels.Add(new CarViewModel { CarType = "Subaru", Owner = "Miral", PlateNo = "WRX 3789" });
+            carViewModels.Add(carViewModel);
 
                 return carViewModels;
             }
+
+        private List<CarViewModel> getCarList
+        {
+            get{ return (List<CarViewModel>)MemoryCache.Default.Get(cacheKey); }
+            set { MemoryCache.Default.Set(cacheKey, value, ObjectCache.InfiniteAbsoluteExpiration); }
+        }
 
         public CarsController()
         {
@@ -35,19 +43,21 @@ namespace Angular_Skeleton.Api.Controllers
         [Route("")]
         public IHttpActionResult Get()
             {
-                return Ok(getCarList());
+                return Ok(getCarList);
             }
 
             // GET: api/Cars/5
             public IHttpActionResult Get(string plateNo)
             {
-                return Ok(getCarList().Where(x => x.PlateNo == plateNo.Trim()));
+                return Ok(getCarList.Where(x => x.PlateNo == plateNo.Trim()));
             }
 
             // POST: api/Cars
             public IHttpActionResult Post(CarViewModel carViewModel)
             {
-                return Ok(carViewModel);
+            getCarList.Add(carViewModel);
+            _carsHub.Clients.All.getCars();
+                return Ok(getCarList);
             }
 
             // PUT: api/Cars/5
