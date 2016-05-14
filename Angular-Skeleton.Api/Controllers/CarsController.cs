@@ -7,9 +7,10 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using System.Runtime.Caching
+using System.Runtime.Caching;
 namespace Angular_Skeleton.Api.Controllers
 {
+   // [System.Web.Http.Authorize]
     [RoutePrefix("api/Cars")]
     public class CarsController : ApiController
     {
@@ -39,7 +40,7 @@ namespace Angular_Skeleton.Api.Controllers
         }
 
 
-        [System.Web.Http.Authorize]
+        //[System.Web.Http.Authorize]
         [Route("")]
         public IHttpActionResult Get()
             {
@@ -57,7 +58,7 @@ namespace Angular_Skeleton.Api.Controllers
             {
             getCarList.Add(carViewModel);
             _carsHub.Clients.All.getCars();
-                return Ok(getCarList);
+                return Ok(carViewModel);
             }
 
             // PUT: api/Cars/5

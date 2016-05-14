@@ -94,6 +94,8 @@
     <Content Include="scripts\angular-local-storage.min.js" />
     <Content Include="scripts\angular.min.js.map" />
     <Content Include="scripts\angular-route.min.js.map" />
+    <Content Include="scripts\jquery.signalR-2.2.0.js" />
+    <Content Include="scripts\jquery.signalR-2.2.0.min.js" />
     <Content Include="scripts\loading-bar.js" />
     <Content Include="scripts\loading-bar.min.js" />
     <Content Include="scripts\version.json" />
@@ -961,6 +963,7 @@
     <Content Include="Services\httpServices.js" />
     <Content Include="Services\notificationService.js" />
     <Content Include="Services\serviceScaffold.js" />
+    <Content Include="Services\signalRhubService.js" />
     <Content Include="Services\userServices.js" />
     <Content Include="tests\controller\calculatorControllerTests.js" />
     <Content Include="tests\controller\homeControllerTests.js" />

@@ -55,8 +55,8 @@
 
     }]);
 
-    dataProcessingApp.config(function ($httpProvider) {
-        $httpProvider.interceptors.push('authInterceptorService');
-    });
+    //dataProcessingApp.config(function ($httpProvider) {
+    //    $httpProvider.interceptors.push('authInterceptorService');
+    //});
 
 })();

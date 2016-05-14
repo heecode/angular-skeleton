@@ -2,10 +2,15 @@
     "use strict";
     var app = angular.module("myApp");
 
-    app.controller("carController", ["CarService", "notificationService", "$uibModal", carController]);
+    app.controller("carController", ["CarService", "notificationService", "$uibModal", "SignalRHub", carController]);
 
-    function carController(CarService, notificationService, $uibModal) {
+    function carController(CarService, notificationService, $uibModal, SignalRHub) {
         var vm = this;
+
+        var carHub = SignalRHub('CarHub');
+        carHub.on('getCars', function () {
+            loadCars();
+        });
 
         var searchCarByPlateNo = function (plateNo) {
             CarService.GetCarByPlateNo(plateNo).then(function (results) {
@@ -27,12 +32,16 @@
            }
            vm.context = carContext;
             CarService.Save(vm.context).then(function (results) {
-               vm.cars.push(carContext);
+              // vm.cars.push(carContext);
                 notificationService.success("Saved", "Success");
             }, function (reason) {
                 notificationService.error(reason);
             });
-        }
+       }
+
+       
+
+       
 
         var loadCars = function () {
             vm.rawContext = "";
