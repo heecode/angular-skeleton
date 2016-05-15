@@ -17,10 +17,11 @@ namespace Angular_Skeleton.Api
         {
             //ConfigureOAuth(app);
             HttpConfiguration config = new HttpConfiguration();
-            WebApiConfig.Register(config);
+                
             app.UseCors(Microsoft.Owin.Cors.CorsOptions.AllowAll);
-            app.MapSignalR();
+            WebApiConfig.Register(config);
             app.UseWebApi(config);
+            app.MapSignalR();
         }
 
         public void ConfigureOAuth(IAppBuilder app)
@@ -28,7 +29,7 @@ namespace Angular_Skeleton.Api
             OAuthAuthorizationServerOptions OAuthServerOptions = new OAuthAuthorizationServerOptions()
             {
                 AllowInsecureHttp = true,
-                TokenEndpointPath = new PathString("/api/token"),
+                TokenEndpointPath = new PathString("/token"),
                 AccessTokenExpireTimeSpan = TimeSpan.FromDays(1),
                 Provider = new SimpleAuthorizationServerProvider()
             };

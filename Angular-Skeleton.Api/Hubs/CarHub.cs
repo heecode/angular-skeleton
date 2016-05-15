@@ -8,9 +8,6 @@ namespace Angular_Skeleton.Api.Hubs
 {
     public class CarHub : Hub
     {
-        public void Hello()
-        {
-            Clients.All.hello();
-        }
+       
     }
 }

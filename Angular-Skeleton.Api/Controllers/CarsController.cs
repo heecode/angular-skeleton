@@ -37,6 +37,11 @@ namespace Angular_Skeleton.Api.Controllers
         public CarsController()
         {
             _carsHub = GlobalHost.ConnectionManager.GetHubContext<CarHub>();
+            //_artistHub = GlobalHost.ConnectionManager.GetHubContext<ArtistHub>();
+            if (getCarList == null)
+            {
+                getCarList = new List<CarViewModel>();
+            }
         }
 
 
@@ -53,10 +58,13 @@ namespace Angular_Skeleton.Api.Controllers
                 return Ok(getCarList.Where(x => x.PlateNo == plateNo.Trim()));
             }
 
-            // POST: api/Cars
-            public IHttpActionResult Post(CarViewModel carViewModel)
+        // POST: api/Cars
+        [Route("")]
+        public IHttpActionResult Post(CarViewModel carViewModel)
             {
+
             getCarList.Add(carViewModel);
+
             _carsHub.Clients.All.getCars();
                 return Ok(carViewModel);
             }

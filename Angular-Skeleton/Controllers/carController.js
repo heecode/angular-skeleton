@@ -7,7 +7,7 @@
     function carController(CarService, notificationService, $uibModal, SignalRHub) {
         var vm = this;
 
-        var carHub = SignalRHub('CarHub');
+        var carHub = SignalRHub('carHub');
         carHub.on('getCars', function () {
             loadCars();
         });

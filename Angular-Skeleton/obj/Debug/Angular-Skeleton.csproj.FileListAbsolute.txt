@@ -88,11 +88,14 @@ C:\MyGitRepo\angular-skeleton\Angular-Skeleton\bin\Microsoft.AI.Web.dll
 C:\MyGitRepo\angular-skeleton\Angular-Skeleton\bin\Microsoft.AI.WindowsServer.dll
 C:\MyGitRepo\angular-skeleton\Angular-Skeleton\bin\Microsoft.ApplicationInsights.dll
 C:\MyGitRepo\angular-skeleton\Angular-Skeleton\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\MyGitRepo\angular-skeleton\Angular-Skeleton\bin\Newtonsoft.Json.dll
 C:\MyGitRepo\angular-skeleton\Angular-Skeleton\bin\Microsoft.AI.DependencyCollector.xml
 C:\MyGitRepo\angular-skeleton\Angular-Skeleton\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\MyGitRepo\angular-skeleton\Angular-Skeleton\bin\Microsoft.AI.Web.xml
 C:\MyGitRepo\angular-skeleton\Angular-Skeleton\bin\Microsoft.AI.WindowsServer.xml
 C:\MyGitRepo\angular-skeleton\Angular-Skeleton\bin\Microsoft.ApplicationInsights.xml
 C:\MyGitRepo\angular-skeleton\Angular-Skeleton\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\MyGitRepo\angular-skeleton\Angular-Skeleton\bin\Newtonsoft.Json.xml
+C:\MyGitRepo\angular-skeleton\Angular-Skeleton\obj\Debug\Angular-Skeleton.csprojResolveAssemblyReference.cache
 C:\MyGitRepo\angular-skeleton\Angular-Skeleton\obj\Debug\Angular-Boilerplat.dll
 C:\MyGitRepo\angular-skeleton\Angular-Skeleton\obj\Debug\Angular-Boilerplat.pdb
