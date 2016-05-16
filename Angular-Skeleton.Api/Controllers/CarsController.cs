@@ -45,7 +45,7 @@ namespace Angular_Skeleton.Api.Controllers
         }
 
 
-        //[System.Web.Http.Authorize]
+       [System.Web.Http.Authorize]
         [Route("")]
         public IHttpActionResult Get()
             {
@@ -59,6 +59,7 @@ namespace Angular_Skeleton.Api.Controllers
             }
 
         // POST: api/Cars
+        [System.Web.Http.Authorize]
         [Route("")]
         public IHttpActionResult Post(CarViewModel carViewModel)
             {
@@ -69,8 +70,9 @@ namespace Angular_Skeleton.Api.Controllers
                 return Ok(carViewModel);
             }
 
-            // PUT: api/Cars/5
-            public IHttpActionResult Put(CarViewModel carViewModel)
+        [Route("{id}")]
+        // PUT: api/Cars/5
+        public IHttpActionResult Put(CarViewModel carViewModel,int id)
             {
                 return Ok(carViewModel);
             }

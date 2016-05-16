@@ -15,7 +15,7 @@ namespace Angular_Skeleton.Api
     {
         public void Configuration(IAppBuilder app)
         {
-            //ConfigureOAuth(app);
+            ConfigureOAuth(app);
             HttpConfiguration config = new HttpConfiguration();
                 
             app.UseCors(Microsoft.Owin.Cors.CorsOptions.AllowAll);

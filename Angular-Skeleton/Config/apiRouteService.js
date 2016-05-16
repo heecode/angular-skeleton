@@ -13,7 +13,7 @@
             getUriFor_carsController: apiurl + "api/cars",
             getUriFor_homeController: apiurl + "api/homes",
             getUriFor_accountController: apiurl + "api/account",
-            getUriFor_tokenController: apiurl + "api/token",
+            getUriFor_tokenController: apiurl + "token",
             getApiUrl : apiurl
         };
     }
