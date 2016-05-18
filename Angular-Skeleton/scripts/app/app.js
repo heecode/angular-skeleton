@@ -1,7 +1,7 @@
 ﻿(function () {
     "use strict";
     var dataProcessingApp = angular.module("myApp",
-    ["ngRoute", "ngAnimate", "toastr", "LocalStorageModule", "angular-loading-bar", "ui.bootstrap"]);
+    ["ngRoute", "ngAnimate", "toastr", "LocalStorageModule", "angular-loading-bar", "ui.bootstrap","kendo.directives"]);
 
     dataProcessingApp.config([
         "$routeProvider",
