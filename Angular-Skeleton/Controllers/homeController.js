@@ -15,6 +15,12 @@
         }
 
         vm.toolTipOptions = {
+            animation: {
+                open: {
+                    effects: "fade:in",
+                    duration: 1000
+                }
+            },
             filter: "td:nth-child(2)",
             position: "top",
             content: function (e) {
