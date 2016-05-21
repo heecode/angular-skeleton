@@ -42,6 +42,10 @@
                     templateUrl: "Views/Signup.html",
                     controller: "signupController",
                     controllerAs: "signupController"
+                }).when("/Kendos", {
+                    templateUrl: "Views/Kendos.html",
+                    controller: "kendoController",
+                    controllerAs: "kendoController"
                 });
 
 
