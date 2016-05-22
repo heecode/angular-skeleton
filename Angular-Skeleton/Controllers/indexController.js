@@ -8,6 +8,11 @@ app.controller('indexController', ['$scope', '$location', 'authService', functio
         $location.path('/Home');
     }
 
+    $scope.index = {};
+    $scope.index.selectDate = '';
+    $scope.index.parentText = '';
+
+
     $scope.authentication = authService.authentication;
 
 }]);

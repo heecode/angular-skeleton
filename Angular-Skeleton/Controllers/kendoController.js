@@ -2,11 +2,12 @@
     "use strict";
     var app = angular.module("myApp");
 
-    app.controller("kendoController", [kendoController]);
+    app.controller("kendoController", ["$scope",kendoController]);
 
-    function kendoController() {
+    function kendoController($scope) {
         var vm = this;
 
+        /*
         vm.toolTipOptions = {
             animation: {
                 open: {
@@ -61,7 +62,12 @@
             }]
         };
 
+        */
 
+        vm.getDate = function () {
+            var date = $scope.index.selectDate;
+            window.alert(date);
+        }
     }
 
 })();

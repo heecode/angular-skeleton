@@ -4,4 +4,13 @@
 
     </kendo-grid>
 
-</div>   
+</div> 
+<span style="background-color:aqua"><h3>Datetime Picker From Index</h3></span>  
+<h3>{{index.selectDate}}</h3>
+<input kendo-date-time-picker
+       ng-model="index.selectDate"
+       k-ng-model="obj"
+       style="width: 100%;" />
+<br />
+<input type="text" ng-model="index.parentText" />
+<input type="button" ng-click="kendoController.getDate()" title="Date"    />                
