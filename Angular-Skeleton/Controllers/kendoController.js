@@ -7,7 +7,7 @@
     function kendoController($scope) {
         var vm = this;
 
-        /*
+
         vm.toolTipOptions = {
             animation: {
                 open: {
@@ -60,14 +60,44 @@
             }, {
                 field: "Title"
             }]
-        };
+        }
+    };
 
-        */
+        
 
         vm.getDate = function () {
             var date = $scope.index.selectDate;
             window.alert(date);
         }
-    }
+
+        vm.xmlGridOptions = {
+            DataSource:{
+                transport: {
+                    // specify the XML file to read. The same as read: { url: "books.xml" }
+                    read: "Config/books.xml"
+                },
+                schema: {
+                    // specify the the schema is XML
+                    type: "xml",
+                    // the XML element which represents a single data record
+                    data: "/books/book",
+                    // define the model - the object which will represent a single data record
+                    model: {
+                        // configure the fields of the object
+                        fields: {
+                            // the "title" field is mapped to the text of the "title" XML element
+                            title: "title/text()",
+                            // the "author" field is mapped to the text of the "author" XML element
+                            author: "author/text()",
+                            // the "url" field is mapped to the text of the "url" XML element
+                            url: "url/text()",
+                            // the "cover" field is mapped to the "id" attribute of the "book" XML element
+                            //cover: "@cover"
+                        }
+                    }
+                }
+
+            }};
+    
 
 })();
