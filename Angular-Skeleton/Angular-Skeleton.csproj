@@ -81,6 +81,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="angular-highcharts-demo.html" />
     <Content Include="Config\books.xml" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -730,10 +731,45 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="scripts\angular-highcharts.js" />
     <Content Include="scripts\angular-local-storage.js" />
     <Content Include="scripts\angular-local-storage.min.js" />
     <Content Include="scripts\angular.min.js.map" />
     <Content Include="scripts\angular-route.min.js.map" />
+    <None Include="scripts\jquery-2.0.3.intellisense.js" />
+    <Content Include="scripts\highcharts\adapters\mootools-adapter.js" />
+    <Content Include="scripts\highcharts\adapters\mootools-adapter.src.js" />
+    <Content Include="scripts\highcharts\adapters\prototype-adapter.js" />
+    <Content Include="scripts\highcharts\adapters\prototype-adapter.src.js" />
+    <Content Include="scripts\highcharts\adapters\standalone-framework.js" />
+    <Content Include="scripts\highcharts\adapters\standalone-framework.src.js" />
+    <Content Include="scripts\highcharts\highcharts-more.js" />
+    <Content Include="scripts\highcharts\highcharts-more.src.js" />
+    <Content Include="scripts\highcharts\highcharts.js" />
+    <Content Include="scripts\highcharts\highcharts.src.js" />
+    <Content Include="scripts\highcharts\highstock.js" />
+    <Content Include="scripts\highcharts\highstock.src.js" />
+    <Content Include="scripts\highcharts\modules\annotations.js" />
+    <Content Include="scripts\highcharts\modules\annotations.src.js" />
+    <Content Include="scripts\highcharts\modules\canvas-tools.js" />
+    <Content Include="scripts\highcharts\modules\canvas-tools.src.js" />
+    <Content Include="scripts\highcharts\modules\data.js" />
+    <Content Include="scripts\highcharts\modules\data.src.js" />
+    <Content Include="scripts\highcharts\modules\exporting.js" />
+    <Content Include="scripts\highcharts\modules\exporting.src.js" />
+    <Content Include="scripts\highcharts\modules\funnel.js" />
+    <Content Include="scripts\highcharts\modules\funnel.src.js" />
+    <Content Include="scripts\highcharts\modules\heatmap.js" />
+    <Content Include="scripts\highcharts\modules\heatmap.src.js" />
+    <Content Include="scripts\highcharts\modules\map.js" />
+    <Content Include="scripts\highcharts\modules\map.src.js" />
+    <Content Include="scripts\highcharts\themes\dark-blue.js" />
+    <Content Include="scripts\highcharts\themes\dark-green.js" />
+    <Content Include="scripts\highcharts\themes\gray.js" />
+    <Content Include="scripts\highcharts\themes\grid.js" />
+    <Content Include="scripts\highcharts\themes\skies.js" />
+    <Content Include="scripts\jquery-2.0.3.js" />
+    <Content Include="scripts\jquery-2.0.3.min.js" />
     <Content Include="scripts\jquery.signalR-2.2.0.js" />
     <Content Include="scripts\jquery.signalR-2.2.0.min.js" />
     <Content Include="scripts\json2.js" />
@@ -1307,7 +1343,6 @@
     <Content Include="scripts\angular-cookies.min.js.map" />
     <Content Include="scripts\angular-aria.min.js.map" />
     <Content Include="scripts\angular-animate.min.js.map" />
-    <Content Include="scripts\jquery-2.0.0.min.map" />
     <Content Include="scripts\angular-local-storage.min.js.map" />
     <Content Include="scripts\kendo\2016.2.504\messages\kendo.messages.zh-TW.min.js.map" />
     <Content Include="scripts\kendo\2016.2.504\messages\kendo.messages.zh-HK.min.js.map" />
@@ -2279,6 +2314,7 @@
     <Content Include="Content\kendo\2016.2.504-source\mobile\android\all.less" />
     <Content Include="Content\kendo\2016.2.504-source\mobile\android\actionsheet.less" />
     <Content Include="Content\kendo\2016.2.504-source\common\transitions.less" />
+    <Content Include="scripts\jquery-2.0.3.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -3116,9 +3152,6 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
-    <None Include="scripts\jquery-2.0.0.intellisense.js" />
-    <Content Include="scripts\jquery-2.0.0.js" />
-    <Content Include="scripts\jquery-2.0.0.min.js" />
     <Content Include="scripts\moment-with-locales.js" />
     <Content Include="scripts\moment-with-locales.min.js" />
     <Content Include="scripts\moment.js" />
