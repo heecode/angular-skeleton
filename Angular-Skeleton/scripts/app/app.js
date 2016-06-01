@@ -1,7 +1,7 @@
 ﻿(function () {
     "use strict";
     var dataProcessingApp = angular.module("myApp",
-    ["ngRoute", "ngAnimate", "toastr", "LocalStorageModule", "angular-loading-bar", "ui.bootstrap","kendo.directives"]);
+    ["ngRoute", "ngAnimate", "toastr", "LocalStorageModule", "angular-loading-bar", "ui.bootstrap", "kendo.directives", "highcharts-ng"]);
 
     dataProcessingApp.config([
         "$routeProvider",
@@ -46,6 +46,10 @@
                     templateUrl: "Views/Kendos.html",
                     controller: "kendoController",
                     controllerAs: "kendoController"
+                }).when("/Highcharts", {
+                    templateUrl: "Views/Highchart.html",
+                    controller: "highChartController",
+                    controllerAs: "highChartController"
                 });
 
 

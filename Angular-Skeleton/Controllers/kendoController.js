@@ -60,10 +60,10 @@
             }, {
                 field: "Title"
             }]
-        }
-    };
+        };
 
-        
+
+
 
         vm.getDate = function () {
             var date = $scope.index.selectDate;
@@ -71,7 +71,7 @@
         }
 
         vm.xmlGridOptions = {
-            DataSource:{
+            DataSource: {
                 transport: {
                     // specify the XML file to read. The same as read: { url: "books.xml" }
                     read: "Config/books.xml"
@@ -97,7 +97,8 @@
                     }
                 }
 
-            }};
-    
+            }
+        };
 
+    }
 })();
