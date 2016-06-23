@@ -32,6 +32,12 @@ namespace Angular_Skeleton.WebApi.Controllers
             return Ok(getCarList());
         }
 
+        public IHttpActionResult GetByVm(CarViewModel carViewModel)
+        {
+            var data = carViewModel;
+            return Ok(getCarList());
+        }
+
         // GET: api/Cars/5
         public IHttpActionResult Get(string plateNo)
         {

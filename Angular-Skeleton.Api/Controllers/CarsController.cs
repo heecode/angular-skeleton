@@ -81,6 +81,18 @@ namespace Angular_Skeleton.Api.Controllers
             public void Delete(int id)
             {
             }
+
+        [System.Web.Http.AcceptVerbs("GET", "POST")]
+        [System.Web.Http.HttpGet]
+        [Route("GetByVm")]
+        public HttpResponseMessage GetByVm([FromUri] CarViewModel carViewModel)
+        {
+          //  var data = carViewModel;
+            return new HttpResponseMessage(HttpStatusCode.OK);
         }
-    
+
+    }
+
+   
+
 }

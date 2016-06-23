@@ -26,6 +26,13 @@
 
 
 </div>
+<div class="row text-center" style="background-color:aqua">
+    Plate No :<input text ng-model="carController.plateNo" /><br />
+    Type :<input text ng-model="carController.carType" /><br />
+    Owner :<input text ng-model="carController.owner" /><br />
+    <button ng-click="carController.getByVm()" value="Add" name="Add">Search</button>
+
+</div>
 <div class="row text-center" style="background:aliceblue">
     <script type="text/ng-template" id="saveCar.html">
         <div class="modal-header">

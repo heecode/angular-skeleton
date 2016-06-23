@@ -75,6 +75,20 @@
             saveCar();
         }
 
+        vm.getByVm = function () {
+            var carViewModel = {
+                plateNo: vm.plateNo,
+                carType: vm.carType
+            }
+
+            CarService.GetCarByCarVM(carViewModel).then(function (results) {
+                vm.cars = results.data;
+                notificationService.success("Data Load", "Success");
+            }, function (reason) {
+                notificationService.error(reason);
+            });
+        }
+
         vm.open = function () {
             openModal('saveCar.html');
         }

@@ -11,6 +11,7 @@
         return {
             getUriFor_usersController: apiurl + "api/users",
             getUriFor_carsController: apiurl + "api/cars",
+            getUriFor_carsController_by_vm: apiurl + "api/cars/getByVm",
             getUriFor_homeController: apiurl + "api/homes",
             getUriFor_accountController: apiurl + "api/account",
             getUriFor_tokenController: apiurl + "token",

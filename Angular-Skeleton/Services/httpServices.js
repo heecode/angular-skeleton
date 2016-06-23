@@ -6,8 +6,12 @@
 
         var services = {};
 
-        var httpGet = function (uri) {
+        var httpGet = function (uri,data) {
             var deferred = $q.defer();
+
+            var config = {
+                params : data
+            }
 
             var successfullGet = function (results) {
                 deferred.resolve(results);
@@ -17,7 +21,7 @@
                 deferred.reject(reason);
             };
 
-            $http.get(uri).then(successfullGet, failedGet);
+            $http.get(uri,config).then(successfullGet, failedGet);
 
             return deferred.promise;
         }
