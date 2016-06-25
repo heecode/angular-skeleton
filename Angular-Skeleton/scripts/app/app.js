@@ -50,6 +50,10 @@
                     templateUrl: "Views/Highchart.html",
                     controller: "highChartController",
                     controllerAs: "highChartController"
+                }).when("/EventBased", {
+                    templateUrl: "Views/EventBased.html",
+                    controller: "eventBasedController",
+                    controllerAs: "eventBasedController"
                 });
 
 

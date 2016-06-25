@@ -724,6 +724,7 @@
     <Content Include="Content\loading-bar.css" />
     <Content Include="Content\loading-bar.min.css" />
     <Content Include="Controllers\carController.js" />
+    <Content Include="Controllers\eventBasedController.js" />
     <Content Include="Controllers\highChartController.js" />
     <Content Include="Controllers\indexController.js" />
     <Content Include="Controllers\kendoController.js" />
@@ -3174,6 +3175,7 @@
     <Content Include="Views\Calculator.html" />
     <Content Include="Views\Car.html" />
     <Content Include="Views\Cars.html" />
+    <Content Include="Views\EventBased.html" />
     <Content Include="Views\HelloWorld.html" />
     <Content Include="Views\HelloWorldBinding.html" />
     <Content Include="Views\HelloWorldIsolate.html" />

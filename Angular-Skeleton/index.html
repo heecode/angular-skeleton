@@ -47,6 +47,11 @@
                                style="width: 100%;" />
                        <input type="text" ng-model="index.parentText" />
                     </li>
+                    <li><a href="#/EventBased">Event Based</a>
+                    <input ng-model="parentMessage"  />
+                   <button ng-click="handleClick(parentMessage);">Broadcast</button>
+
+                    </li>
                    
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
@@ -138,6 +143,7 @@
     <script src="Controllers/indexController.js"></script>
     <script src="Controllers/kendoController.js"></script>
     <script src="Controllers/highChartController.js"></script>
+    <script src="Controllers/eventBasedController.js"></script>
 
     <!-- Directives -->
     <script src="Directives/myAppDirective.js"></script>
