@@ -49,8 +49,8 @@
                     </li>
                     <li><a href="#/EventBased">Event Based</a>
                     <input ng-model="parentMessage"  />
-                   <button ng-click="handleClick(parentMessage);">Broadcast</button>
-
+                   <button ng-click="handleClick(parentMessage);">Broadcast</button> <br />
+                        <button ng-click="handleClickService(parentMessage);">Broadcast Service</button>
                     </li>
                    
                 </ul>
@@ -126,6 +126,9 @@
     <script src="Services/authService.js"></script>
     <script src="Services/signalRhubService.js"></script>
     <script src="Services/authInterceptorService.js"></script>
+    <script src="Services/emitService.js"></script>
+
+
    
    
 

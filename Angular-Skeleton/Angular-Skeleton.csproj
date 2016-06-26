@@ -3163,6 +3163,7 @@
     <Content Include="Services\authInterceptorService.js" />
     <Content Include="Services\authService.js" />
     <Content Include="Services\carService.js" />
+    <Content Include="Services\emitService.js" />
     <Content Include="Services\helloService.js" />
     <Content Include="Services\httpServices.js" />
     <Content Include="Services\notificationService.js" />
